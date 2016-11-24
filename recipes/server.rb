@@ -8,6 +8,9 @@ package 'httpd'
 
 file '/var/www/html/index.html' do
   content '<h1>Hello, world!</h1>'
+  mode '0644'
+  owner 'root'
+  group 'root'
 end
 
 service 'httpd' do
